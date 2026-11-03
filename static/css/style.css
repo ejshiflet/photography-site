@@ -1,0 +1,635 @@
+:root {
+    --primary-text-color--: #dfdfdf;
+    --primary-font-family--: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --accent-color--: #7A8D80;
+    --background-color--: rgb(20, 20, 20);
+}
+
+html {
+    background-color: var(--background-color--);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    letter-spacing: 0.05em;
+    font-family: var(--primary-font-family--);
+    text-transform: uppercase;
+    color: var(--primary-text-color--);
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color--);
+}
+
+h1, h2, .thin-text {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 100 !important;
+}
+
+/*===================Header All===================*/
+
+#header-img {
+    width: 80px;
+    background-color: transparent;
+    padding-top: 2px
+}
+
+#img-border {
+    width:70px;
+    height: 70px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    border: 2px solid var(--accent-color--)
+}
+
+#header-title {
+    padding-left: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color--);
+    color: var(--primary-text-color--);
+    font-family: var(--primary-font-family--);
+    top: 0;
+    z-index: 1000;
+}
+
+#title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.nav-link-container {
+    font-size: 1.2rem;
+    margin: 20px;
+    font-size: 15px;
+}
+
+#nav-bar {
+    padding-right: 30px
+}
+
+#contact-link-container {
+    border: 1px solid var(--accent-color--);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#contact-link-container:hover {
+    background-color: var(--accent-color--);
+}
+
+#contact-link {
+    display: inline-block;
+    padding: 10px
+}
+
+.nav-link{
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color--);
+}
+
+#contact-link:hover {
+    color: black;
+}
+
+/*===================index.html===================*/
+
+.home-page main {
+    background-color: var(--background-color--);
+    color: var(--primary-text-color--);
+    font-family: var(--primary-font-family--);
+}
+
+.home-page #introduction-text {
+    text-align: center;
+    font-size: 50px;
+    max-width: 50%;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 100 !important;
+}
+
+.home-page #introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.home-page #carousel {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#home-img-carousel .splide__slide {
+  width: auto !important; /* Force space layout if JS calculations are delayed */
+}
+
+#home-img-carousel .splide__slide img {
+  width: auto;
+  height: 650px;
+  display: block;
+}
+
+#what-its-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.home-page #what-its-like #left-section h3 {
+    padding-bottom: 20px;
+}
+
+.home-page #what-its-like #left-section h2 {
+    font-size: 40px;
+}
+
+.home-page #what-its-like #left-section{
+    width: 400px;
+    
+}
+
+.home-page #what-its-like #right-section{
+    width: 500px;
+    padding-top: 45px;
+    padding-left: 40px;
+}
+
+#inquire-today-container {
+    border: 1px solid var(--accent-color--);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#inquire-today-container:hover {
+    background-color: var(--accent-color--);
+}
+
+#inquire-link {
+    display: inline-block;
+    padding: 20px
+}
+
+#inquire-link:hover {
+    color: black;
+}
+
+/*==================testimonials All==============*/
+
+/* 1. Center the slide wrapper container and force it to match your image size */
+.testimonial-slider .splide__track {
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto 100px auto; /* Centers the track and image on the screen */
+}
+
+/* 2. Position the arrow container absolutely over the centered track */
+.testimonial-slider .splide__arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the arrow container perfectly over the image */
+  width: 1200px; /* Matches the exact width of your image */
+  height: 0; /* Keeps the container from blocking clicks on the image */
+  z-index: 10;
+  pointer-events: none; /* Allows clicking through the empty space container */
+}
+
+/* 3. Re-enable pointer events for the buttons so they stay clickable */
+.testimonial-slider .splide__arrow {
+    pointer-events: auto; 
+}
+
+/* 4. Lock the arrows exactly to the 0 boundary of that 1200px box */
+.testimonial-slider .splide__arrow--prev {
+    left: 0; 
+}
+
+.testimonial-slider .splide__arrow--next {
+    right: 0; 
+}
+
+/* Keep your existing slide styles below */
+.testimonial-slider .splide__slide {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-slider .splide__slide img {
+    width: 1200px;
+    height: 500px;
+    z-index: 1;
+    display: block;
+    object-fit: cover; /* Optional: keeps your 1200x500 image from stretching distortion */
+}
+
+.image-container {
+  position: relative; /* Anchor for absolute positioning */
+  display: inline-block;
+  width: 100%;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* Black with 50% opacity (adjust as needed) */
+}
+
+.text-overlay {
+    position: absolute; /* Positions text relative to .image-container */
+    top: 0;
+    left: 0;
+    padding: 20px 200px 20px 200px;
+    color: white;       /* Text color */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.text-overlay h2 {
+    font-size: 20px;
+}
+
+.text-overlay p {
+    font-size: 30px;
+}
+
+.text-overlay h3 {
+    font-size: 30px;
+}
+
+/*===================about.html===================*/
+
+.about-page main {
+    background-color: var(--background-color--);
+    color: var(--primary-text-color--);
+    font-family: var(--primary-font-family--);
+}
+
+.about-page #about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-bottom: solid rgb(41, 41, 41);
+    padding-top: 50px;
+    padding-bottom: 100px
+}
+
+.about-page #about-me-title {
+    font-size: 2.1rem;
+    text-align: center;
+    margin-left: 70px;
+    padding-top: 50px;
+}
+
+.about-page #headshot {
+    align-self: flex-start; /* Prevents the vertical stretch */
+    height: auto;           /* Forces the height to scale proportionally with width */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    width: 450px;
+}
+
+.about-page #about-me-paragraph-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-page .about-me-paragraphs {
+    width: 400px;
+    text-align: left;
+    font-size: 17px;
+    padding-top: 30px;
+    margin-left: 70px;
+    text-transform: none;
+    text-align: center;
+    line-height: 150%;
+}
+
+/*===================services.html===================*/
+
+.services-page main {
+    background-color: var(--background-color--);
+    color: var(--primary-text-color--);
+    font-family: var(--primary-font-family--);
+}
+
+.services-page #pricing-title {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 2.1rem
+}
+
+.services-page .pricing-container {
+    border: none;
+    margin: auto;
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.services-page .pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color:  rgb(27, 27, 27);;
+    margin: 15px;
+    transition: transform ease 0.3s;
+    overflow-wrap: break-word;
+    color: var(--primary-text-color--);
+}
+
+.services-page .pricing-card:hover {
+    transform: scale(1.03);
+}
+
+.services-page .service-image {
+    width: 575px;
+}
+
+.services-page .pricing-card p {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.services-page .pricing-card hr {
+    width: 90%;
+    border: 1px solid rgb(85, 85, 85);
+    margin-bottom: 10px;
+}
+
+.services-page .service-type {
+    padding: 20px;
+}
+
+.services-page .choose-service {
+    background: transparent;
+    border: 1px solid var(--accent-color--);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    margin: 20px;
+    color: var(--primary-text-color--);
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.services-page .choose-service:hover {
+    background-color: var(--accent-color--);
+    color: black;
+}
+
+/*===================faq.html===================*/
+
+.faq-page #faq-title {
+    color: var(--primary-text-color--);
+    text-align: center;
+    font-size: 40px;
+}
+
+.faq-page .question {
+    font-size: 30px;
+    color: var(--primary-text-color--)
+}
+
+.faq-page #faq-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*===================Footer===================*/
+
+footer {
+  background-color: #0D0D0E;
+  padding: 6rem 4rem;
+  font-family: var(--primary-font-family--);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-column h3 {
+    color: var(--primary-text-color--)
+}
+
+.footer-column h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666666;
+  margin-bottom: 1.5rem;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+    color: var(--primary-text-color--)
+}
+
+.footer-column a:hover {
+  color: var(--accent-color--);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #555558;
+  margin-top: 1rem;
+}
+
+.footer-email {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+
+.newsletter-box p {
+  font-size: 0.9rem;
+  color: #B3B3B3;
+  margin-bottom: 0.8rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-form #email {
+  background-color: #1A1A1C;
+  border: 1px solid #333336;
+  color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  outline: none;
+  width: 200px;
+}
+
+.newsletter-box p {
+    color: var(--primary-text-color--)
+}
+
+.newsletter-form #email:focus {
+  border-color: var(--accent-color--);
+}
+
+.newsletter-form #submit {
+  background-color: transparent;
+  border: 1px solid var(--accent-color--);
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form #submit:hover {
+  background-color: var(--accent-color--);
+  color: #000000;
+}
+
+
+/*===================Media===================*/
+
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .gallery-image {
+        width: 350px;
+    }
+
+    #about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #headshot {
+        width: 300px;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .service-image {
+        width: 350px;
+    }
+
+    .about-me-paragraphs {
+        width: 300px;
+        margin: auto;
+    }
+
+    #about-me-title {
+        width: 300px;
+        margin: auto;
+    }
+}
+
+@media screen and (400px <= width <= 750px) {
+    header {
+        flex-direction: column;
+    }
+
+    .gallery-image {
+        width: 400px;
+    }
+
+    #about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #headshot {
+        width: 350px;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .service-image {
+        width: 400px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1500px) {
+  .gallery-image {
+    width: 700px;
+  }
+  .service-image {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1900px) {
+  .gallery-image {
+    width: 400px;
+  }
+  .service-image {
+    width: 400px;
+  }
+}
+
