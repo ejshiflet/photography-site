@@ -27,15 +27,29 @@
 
 
         <main>
-            <section id="contact-form">
+            <section id="contact">
                 <h1>Let's Connect</h1>
                 <h2>For any questions or bookings contact me using the form below! I typically respond within 24 hours.</h2>
                 <p>Email: Shifletstudios@gmail.com</p>
+                <div id="contact-form-container">
+                    <form class="contact-form">
+                        <label for="first-name">First Name</label>
+                        <input id="first-name" type="text" required>
+
+                        <label for="last-name">Last Name</label>
+                        <input id="last-name" type="text" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required>
+
+                        <label for="user-message">Your Message</label>
+                        <textarea id="user-message" type="text" rows="5" required></textarea>
+                </form>
+                </div>
             </section>
         </main>
 
         <footer>
-            <section id="contact">
                 <div class="footer-container">
 
                     <div class="footer-column branding">
@@ -66,7 +80,6 @@
                     </div>
 
                 </div>
-            </section>
         </footer>
     </body>
 
