@@ -18,32 +18,32 @@ def home():
 
     carousel_images = [row[0] for row in raw_images]
 
-    return render_template('home.html', carousel_images=carousel_images, testimonials=testimonial_creation())
+    return render_template('home.html', page_class='home-page', carousel_images=carousel_images, testimonials=testimonial_creation())
 
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template('portfolio.html')
+    return render_template('portfolio.html', page_class='portfolio-page')
 
 @app.route('/wedding-investments')
 def wedding_investments():
-    return render_template('wedding_investments.html', testimonials=testimonial_creation())
+    return render_template('wedding_investments.html', page_class='wedding-investments-page', testimonials=testimonial_creation())
 
 @app.route('/lifestyle')
 def lifestyle():
-    return render_template('lifestyle.html', testimonials=testimonial_creation())
+    return render_template('lifestyle.html', page_class='services-page', testimonials=testimonial_creation())
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', page_class='about-page')
 
 @app.route('/faq')
 def faq():
-    return render_template('faq.html')
+    return render_template('faq.html', page_class='faq-page')
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', page_class='contact-page')
 
 def testimonial_creation():
     connection = sqlite3.connect("database.db")
