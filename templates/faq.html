@@ -2,24 +2,117 @@
 
 {% block content %}
 
-            <section id="faq">
-                <h2 id="faq-title">Questions & Answers</h2>
-                <div id="faq-container">
-                    <ol id="faq-list">
-                        <li class="list-item">
-                            <h3 class="question">How do I book?</h3>
-                        </li>
-                        <li class="list-item">
-                            <h3 class="question">Can we schedule a consultation or phone call before booking?</h3>
-                        </li>
-                        <li class="list-item">
-                            <h3 class="question">What is the Final photo turn around time? </h3>
-                        </li>
-                        <li class="list-item">
-                            <h3 class="question">Do you require a deposit?</h3>
-                        </li>
-                    </ol>
+
+
+            <div class="faq-container">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+              
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                    How do I book?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-1" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>You can inquire through contact page and I will respond within 24 hours to get your booking set up. </p>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                    Can we schedule a consultation or phone call before booking?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-2" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>Yes, I am always willing to meet and chat to make the booking as smooth as possible.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                    What is the final photo turn around time? 
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-3" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>7-14 day from the time of photo selection (excludes wedding packages).</p>
+                    </div>
+                  </div>
+                </div>
+
+                              <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                    Do you require a deposit?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-4" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>Yes, a 50% deposit is due at the signing of the contract.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                    What forms of payment do you accept?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-5" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>I accept payments through the invoice link or Zelle only.</p>
+                    </div>
+                  </div>
+                </div>
+
+                              <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+                    How will I recieve my photos? 
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-6" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>You will receive your photos through an online digital photo gallery.</p>
+                    </div>
+                  </div>
+                </div>
+
+                              <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">
+                    Do you give out raw photos? 
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-7" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>All raws can be purchased for $200. </p>
+                    </div>
+                  </div>
+                </div>
+
+                              <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">
+                    What if i am late to my shoot?
+                    <span class="faq-icon" aria-hidden="true"></span>
+                  </button>
+                  <div id="faq-answer-9" class="faq-answer">
+                    <div class="faq-answer-content">
+                      <p>Please arrive on time. After 10 minutes, a $40 late fee applies. If you are more than 15 minutes late, your session may be cancelled. </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <script src="{{url_for('static', filename='js/faq_dropdown.js') }}"></script>
 
 {% endblock %}
