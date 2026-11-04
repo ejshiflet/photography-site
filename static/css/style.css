@@ -230,11 +230,11 @@ header {
 
 /* 4. Lock the arrows exactly to the 0 boundary of that 1200px box */
 .testimonial-slider .splide__arrow--prev {
-    left: 0; 
+    left: 8px; 
 }
 
 .testimonial-slider .splide__arrow--next {
-    right: 0; 
+    right: 8px; 
 }
 
 /* Keep your existing slide styles below */
@@ -250,6 +250,18 @@ header {
     display: block;
     object-fit: cover; /* Optional: keeps your 1200x500 image from stretching distortion */
 }
+
+.splide__arrow {
+    background: var(--accent-color--);
+    opacity: 0.7;
+  }
+
+  .splide__arrow svg {
+    fill: #ffffff;
+    width: 20px;
+    height: 20px;
+  }
+  
 
 .image-container {
   position: relative; /* Anchor for absolute positioning */
