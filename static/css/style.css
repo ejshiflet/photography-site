@@ -208,6 +208,7 @@ header {
 .testimonial-slider .splide__track {
     position: relative;
     max-width: 1200px;
+    width: 80%;
     margin: 0px auto 100px auto; /* Centers the track and image on the screen */
 }
 
@@ -216,8 +217,9 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: 1200px;
   transform: translate(-50%, -50%); /* Centers the arrow container perfectly over the image */
-  width: 1200px; /* Matches the exact width of your image */
+  width: 80%; /* Matches the exact width of your image */
   height: 0; /* Keeps the container from blocking clicks on the image */
   z-index: 10;
   pointer-events: none; /* Allows clicking through the empty space container */
@@ -244,7 +246,7 @@ header {
 }
 
 .testimonial-slider .splide__slide img {
-    width: 1200px;
+    width: 100%;
     height: 500px;
     z-index: 1;
     display: block;
@@ -327,7 +329,6 @@ header {
     font-size: 2.1rem;
     text-align: center;
     margin-left: 70px;
-    padding-top: 50px;
 }
 
 .about-page #headshot {
@@ -336,16 +337,18 @@ header {
     margin-top: 10px;
     margin-bottom: 30px;
     margin-right: 50px;
-    width: 450px;
+    max-width: 450px;
+    width: 40%;
 }
 
 .about-page #about-me-paragraph-container {
     display: flex;
     flex-direction: column;
+    max-width: 450px;
+    width: 40%;
 }
 
 .about-page .about-me-paragraphs {
-    width: 400px;
     text-align: left;
     font-size: 17px;
     padding-top: 30px;
@@ -443,7 +446,6 @@ header {
     background: var(--background-color--);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
   
   .faq-title {
@@ -572,7 +574,7 @@ header {
 
 
 #contact-form-container {
-    width: 60%;
+    width: 70%;
     padding: 30px;
     margin-bottom: 50px;
 }
@@ -758,86 +760,44 @@ footer {
 
 /*===================Media===================*/
 
+@media screen and (max-width: 750px) {
 
-@media screen and (max-width: 480px) {
-    header {
+       
+    /* 1. Added .about-page to match specificity so the column layout actually triggers */
+    .about-page #about-me {
         flex-direction: column;
+        align-items: center; /* Centers the image and paragraph container vertically */
+        padding-top: 30px;
+        padding-bottom: 50px;
     }
 
-    .gallery-image {
-        width: 350px;
+    /* 2. Overrides the 40% width so the image fills the screen nicely on iPhone */
+    .about-page #headshot {
+        width: 80%; 
+        max-width: 400px;
+        margin-right: 0; /* Clears desktop spacing */
+        align-self: center;
     }
 
-    #about-me {
-        flex-direction: column;
-        align-items: center;
+    /* 3. Overrides the 40% width so paragraphs expand to fit mobile screens */
+    .about-page #about-me-paragraph-container {
+        width: 90%;
     }
 
-    #headshot {
-        width: 300px;
-        padding: 0;
-        margin-right: 0;
+    /* 4. Resets the large 70px left margin which would push text off-center on mobile */
+    .about-page #about-me-title {
+        margin-left: 0; 
+        padding-top: 20px;
+        font-size: 1.8rem; /* Slices down the title size slightly for small screens */
     }
 
-    .service-image {
-        width: 350px;
-    }
-
-    .about-me-paragraphs {
-        width: 300px;
-        margin: auto;
-    }
-
-    #about-me-title {
-        width: 300px;
-        margin: auto;
-    }
-}
-
-@media screen and (400px <= width <= 750px) {
-    header {
-        flex-direction: column;
-    }
-
-    .gallery-image {
-        width: 400px;
-    }
-
-    #about-me {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #headshot {
-        width: 350px;
-        padding: 0;
-        margin-right: 0;
-    }
-
-    .service-image {
-        width: 400px;
+    /* 5. Clears the left margin so paragraphs center perfectly */
+    .about-page .about-me-paragraphs {
+        margin-left: 0;
+        padding-top: 15px;
     }
 
     .footer-container {
         flex-direction: column;
     }
 }
-
-@media screen and (min-width: 750px) and (max-width: 1500px) {
-  .gallery-image {
-    width: 700px;
-  }
-  .service-image {
-    width: 700px;
-  }
-}
-
-@media screen and (min-width: 1500px) and (max-width: 1900px) {
-  .gallery-image {
-    width: 400px;
-  }
-  .service-image {
-    width: 400px;
-  }
-}
-
