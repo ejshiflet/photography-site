@@ -1,1 +1,1 @@
-Download nodemodules and store in main folder
+Download nodemodules and put it in the main photography-site folder
