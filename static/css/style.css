@@ -481,7 +481,7 @@ header {
     flex: column;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 3rem;
 }
 
 .services-page .pricing-card {
@@ -489,7 +489,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding-bottom: 1.2rem;
     background-color:  rgb(27, 27, 27);;
     margin: 15px;
     transition: transform ease 0.3s;
@@ -513,29 +513,19 @@ header {
 
 .services-page .pricing-card hr {
     width: 90%;
-    border: 1px solid rgb(85, 85, 85);
-    margin-bottom: 10px;
+    border: 0.5px solid var(--primary-text-color--);
+    margin-bottom: 20px;
 }
 
 .services-page .service-type {
     padding: 20px;
 }
 
-.services-page .choose-service {
-    background: transparent;
-    border: 1px solid var(--accent-color--);
-    cursor: pointer;
-    font-size: 16px;
-    padding: 8px;
-    margin: 20px;
-    color: var(--primary-text-color--);
-    transition: color 0.3s ease;
-    transition: background-color 0.3s ease;
-}
-
-.services-page .choose-service:hover {
-    background-color: var(--accent-color--);
-    color: black;
+.services-page #upcharge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
 }
 
 /*===================faq.html===================*/
