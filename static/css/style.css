@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Inter-Local';
+    src: url('./Inter-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
 :root {
     --primary-text-color--: #dfdfdf;
-    --primary-font-family--: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --primary-font-family--: 'Inter-Local', "Helvetica Neue", Helvetica, Arial, sans-serif;
     --accent-color--: #7A8D80;
     --background-color--: rgb(20, 20, 20);
 }
@@ -115,7 +122,7 @@ header {
     color: black;
 }
 
-/*===================index.html===================*/
+/*===================home.html===================*/
 
 .home-page main {
     background-color: var(--background-color--);
@@ -125,7 +132,7 @@ header {
 
 .home-page #introduction-text {
     text-align: center;
-    font-size: 50px;
+    font-size: 3.2rem;
     max-width: 50%;
     font-family: 'Inter', sans-serif !important;
     font-weight: 100 !important;
@@ -134,8 +141,7 @@ header {
 .home-page #introduction {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
 .home-page #carousel {
@@ -284,11 +290,11 @@ header {
 .text-overlay {
     position: absolute; /* Positions text relative to .image-container */
     top: 0;
-    left: 0;
-    padding: 20px 200px 20px 200px;
+    left: 10%;
+    padding: 20px 0 20px 0;
     color: white;       /* Text color */
     text-align: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -301,11 +307,92 @@ header {
 }
 
 .text-overlay p {
-    font-size: 30px;
+    font-family: var(--primary-font-family--);
+    font-size: 1.875rem;
+    font-weight: 200 !important;
+    
 }
 
 .text-overlay h3 {
     font-size: 30px;
+}
+/*================wedding_investments.html========*/
+
+.wedding-investments-page main {
+    background-color: var(--background-color--);
+    color: var(--primary-text-color--);
+    font-family: var(--primary-font-family--);
+}
+
+.wedding-investments-page #pricing-title {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 40px;
+    font-size: 2.1rem
+}
+
+.wedding-investments-page .pricing-container {
+    border: none;
+    margin: auto;
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.wedding-investments-page .pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color:  rgb(27, 27, 27);;
+    margin: 15px;
+    transition: transform ease 0.3s;
+    overflow-wrap: break-word;
+    color: var(--primary-text-color--);
+}
+
+.wedding-investments-page .pricing-card:hover {
+    transform: scale(1.03);
+}
+
+.wedding-investments-page .service-image {
+    max-width: 575px;
+    width: 100%;
+}
+
+.wedding-investments-page .pricing-card p {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.wedding-investments-page .pricing-card hr {
+    width: 90%;
+    border: 1px solid rgb(85, 85, 85);
+    margin-bottom: 10px;
+}
+
+.wedding-investments-page .service-type {
+    padding: 20px;
+}
+
+.wedding-investments-page .choose-service {
+    background: transparent;
+    border: 1px solid var(--accent-color--);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    margin: 20px;
+    color: var(--primary-text-color--);
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.wedding-investments-page .choose-service:hover {
+    background-color: var(--accent-color--);
+    color: black;
 }
 
 /*===================about.html===================*/
@@ -366,12 +453,26 @@ header {
     font-family: var(--primary-font-family--);
 }
 
-.services-page #pricing-title {
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 40px;
-    font-size: 2.1rem
+.services-page #introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3.5rem;
 }
+
+.services-page #introduction > h2 {
+    text-align: center;
+    max-width: 800px;
+    font-size: 2.1rem;
+}
+
+.services-page #introduction > h3 {
+    text-align: center;
+    max-width: 800px;
+    font-size: 1rem;
+    padding: 2rem 0 3rem 0;
+}
+
 
 .services-page .pricing-container {
     border: none;
@@ -449,6 +550,7 @@ header {
   }
   
   .faq-title {
+    font-size: 2.1rem;
     text-align: center;
     margin-bottom: 2rem;
     color: var(--primary-text-color--);
@@ -546,7 +648,7 @@ header {
 
 #contact h1 {
     text-align: center;
-    padding: 40px 0 10px 0;
+    padding: 2.1rem 0 10px 0;
 }
 
 
@@ -762,7 +864,9 @@ footer {
 
 @media screen and (max-width: 750px) {
 
-       
+    .text-overlay p {
+    font-size: 1.3rem;
+}
     /* 1. Added .about-page to match specificity so the column layout actually triggers */
     .about-page #about-me {
         flex-direction: column;

@@ -2,6 +2,46 @@
 
 {% block content %}
 
+            <section id="pricing">
+                <h2 id="pricing-title" >Wedding Investments</h2>
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <img class="service-image" src="{{ url_for('static', filename='photos/service1.png') }}">
+                        <h2 class="service-type" >Headshot Event</h2>
+                        <hr>
+                        <p>$50</p>
+                        <p>Up to 20 Minutes</p>
+                        <p>3 Edited Photos</p>
+                        <p>1 Location</p>
+                        <p>Digital Photo Gallery</p>
+                        <button class="choose-service">Select Service</button>
+                    </div>
+                    <div class="pricing-card">
+                        <img class="service-image" src="{{ url_for('static', filename='photos/service2.png') }}">
+                        <h2 class="service-type">Graduation Package</h2>
+                        <hr>
+                        <p>$80</p>
+                        <p>Up to 45 Minutes</p>
+                        <p>8-10 Edited Photos</p>
+                        <p>1 Location</p>
+                        <p>Digital Photo Gallery</p>
+                        <button class="choose-service">Select Service</button>
+                    </div>
+                    <div class="pricing-card">
+                        <img class="service-image" src="{{ url_for('static', filename='photos/service3.png') }}">
+                        <h2 class="service-type">Family Package</h2>
+                        <hr >
+                        <p>$250</p>
+                        <p>Up to 30 Minutes</p>
+                        <p>8-10 Edited Photos</p>
+                        <p>1 Location</p>
+                        <p>Digital Photo Gallery</p>
+                        <button class="choose-service">Select Service</button>
+                    </div>
+                </div>
+            </section>
+
+
             <section id="testimonials">
                 <div class="splide testimonial-slider" role="group" aria-label="home-carousel">
                     <div class="splide__track">

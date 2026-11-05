@@ -43,11 +43,12 @@ window.addEventListener('load', function () {
   if (testimonialSliderEl) {
     new Splide('.testimonial-slider', {
       type: 'loop',       // Keeps the slider looping infinitely
-      gap: '1200px',        // Adds space (16px) between the images
+      gap: 0,        // Adds space (16px) between the images
 
       focus: 'center',
       trimSpace: false,
 
+      perPage: 1,
       perMove: 1,
       speed: 800,
       easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
