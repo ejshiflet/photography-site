@@ -490,17 +490,17 @@ header {
     justify-content: center;
     align-items: center;
     padding-bottom: 1.2rem;
-    background-color:  rgb(27, 27, 27);;
+    background-color:  rgb(27, 27, 27);
     margin: 15px;
     transition: transform ease 0.3s;
     overflow-wrap: break-word;
     color: var(--primary-text-color--);
 }
-
+/*
 .services-page .pricing-card:hover {
     transform: scale(1.03);
 }
-
+*/
 .services-page .service-image {
     max-width: 575px;
     width: 100%;
@@ -521,11 +521,58 @@ header {
     padding: 20px;
 }
 
-.services-page #upcharge-container {
+.services-page .upcharge-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
+}
+
+.services-page #group-packages {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    max-width: 1000px;
+}
+
+.services-page #group-package-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.services-page #group-package-information {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.services-page .group-package {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 330px;
+}
+
+.services-page .group-package hr {
+    width: 90%;
+    border: 0.5px solid var(--primary-text-color--);
+    margin-bottom: 20px;
+}
+
+.services-page #group-package-one {
+    background-color: rgb(27, 27, 27);
+}
+
+.services-page #group-package-two {
+    background-color:#181818;
+}
+
+.services-page .group-package p {
+    padding: 8px 0;
+    text-align: center;
 }
 
 /*===================faq.html===================*/
