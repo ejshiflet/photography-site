@@ -491,7 +491,7 @@ header {
     align-items: center;
     padding-bottom: 1.2rem;
     background-color:  rgb(27, 27, 27);
-    margin: 15px;
+    margin: 0 15px ;
     transition: transform ease 0.3s;
     overflow-wrap: break-word;
     color: var(--primary-text-color--);
@@ -573,6 +573,12 @@ header {
 .services-page .group-package p {
     padding: 8px 0;
     text-align: center;
+}
+
+.services-page .portrait-title {
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 /*===================faq.html===================*/
@@ -903,7 +909,12 @@ footer {
 
     .text-overlay p {
     font-size: 1.3rem;
-}
+    }   
+
+    .services-page #group-package-information {
+        flex-direction: column;
+    }
+
     /* 1. Added .about-page to match specificity so the column layout actually triggers */
     .about-page #about-me {
         flex-direction: column;
