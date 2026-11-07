@@ -325,13 +325,6 @@ header {
     font-family: var(--primary-font-family--);
 }
 
-.wedding-investments-page #pricing-title {
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 40px;
-    font-size: 2.1rem
-}
-
 .wedding-investments-page .pricing-container {
     border: none;
     margin: auto;
@@ -347,16 +340,12 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 20%;
+    height: 400px;
     padding: 0;
     background-color:  rgb(27, 27, 27);;
-    margin: 15px;
-    transition: transform ease 0.3s;
     overflow-wrap: break-word;
     color: var(--primary-text-color--);
-}
-
-.wedding-investments-page .pricing-card:hover {
-    transform: scale(1.03);
 }
 
 .wedding-investments-page .service-image {
@@ -379,22 +368,63 @@ header {
     padding: 20px;
 }
 
-.wedding-investments-page .choose-service {
-    background: transparent;
-    border: 1px solid var(--accent-color--);
-    cursor: pointer;
-    font-size: 16px;
-    padding: 8px;
-    margin: 20px;
-    color: var(--primary-text-color--);
-    transition: color 0.3s ease;
-    transition: background-color 0.3s ease;
+.wedding-investments-page #micro,
+.wedding-investments-page #full-day {
+    background-color: var(--background-color--);
 }
 
-.wedding-investments-page .choose-service:hover {
-    background-color: var(--accent-color--);
-    color: black;
+.wedding-investments-page #inquire-link {
+    display: inline-block;
+    padding: 10px;
 }
+
+.wedding-investments-page #wedding-add-ons {
+    text-align: center;
+}
+
+.wedding-investments-page #wedding-add-ons > h2 {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.wedding-investments-page #wedding-add-ons > p {
+    padding-bottom: 1rem;
+}
+
+.wedding-investments-page #elopement {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 5rem;
+}
+
+.wedding-investments-page .elopement-containers {
+    width: 38%;
+}
+
+.wedding-investments-page #elopement-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wedding-investments-page #elopement-left > p {
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+.wedding-investments-page #elopement-left > h2 {
+    padding-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.wedding-investments-page #elopement-img {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 2rem;
+
+}
+
 
 /*===================about.html===================*/
 

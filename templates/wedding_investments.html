@@ -1,23 +1,35 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+  
+            <section id="elopement">
+                <div id="elopement-left" class="elopement-containers">
+                    <h2>Elopement</h2>
+                    <p>- 1 Hour of Continual Coverage</p>
+                    <p>- 1 Photographer</p>
+                    <p>- 20-50 High Resolution Edited Photos</p>
+                    <p>- Digital Photo Gallery</p>
+                    <p>- Perfect For Small Ceremonies, Courthouse, and Intimate Gatherings</p>
+                    <p>- $350</p>
+                </div>
+                <div id="elopement-right" class="elopement-containers">
+                    <img id="elopement-img" alt="elopement-photo" src="{{ url_for('static', filename='photos/DSC05173.jpg')}}">
+                </div>
+            </section>
 
             <section id="pricing">
-                <h2 id="pricing-title" >Wedding Investments</h2>
                 <div class="pricing-container">
-                    <div class="pricing-card">
-                        <img class="service-image" src="{{ url_for('static', filename='photos/service1.png') }}">
-                        <h2 class="service-type" >Micro Wedding</h2>
+                    <div class="pricing-card" id="micro">
+                        <h2 class="service-type">Micro Wedding</h2>
                         <hr>
                         <p>$1800</p>
                         <p>6 Hours of Continual Coverage</p>
                         <p>1 Photographer</p>
                         <p>250+ High Resolution Edited Photos</p>
                         <p>Digital Photo Gallery</p>
-                        <button class="choose-service">Select Service</button>
+                        <span id="inquire-today-container"><a id="inquire-link" href="/contact">Inquire Today</a></span>
                     </div>
-                    <div class="pricing-card">
-                        <img class="service-image" src="{{ url_for('static', filename='photos/service2.png') }}">
+                    <div class="pricing-card" id="half-day">
                         <h2 class="service-type">Wedding - Half Day</h2>
                         <hr>
                         <p>$2300</p>
@@ -25,22 +37,41 @@
                         <p>1 Photographer</p>
                         <p>400+ High Resolution Edited Photos</p>
                         <p>Digital Photo Gallery</p>
-                        <button class="choose-service">Select Service</button>
+                        <span id="inquire-today-container"><a id="inquire-link" href="/contact">Inquire Today</a></span>
                     </div>
-                    <div class="pricing-card">
-                        <img class="service-image" src="{{ url_for('static', filename='photos/service3.png') }}">
+                    <div class="pricing-card" id="full-day">
                         <h2 class="service-type">Wedding - Full Day </h2>
-                        <hr >
+                        <hr>
                         <p>$2800</p>
                         <p>10 Hours of Continual Coverage</p>
                         <p>1 Photographer</p>
                         <p>450+ High Resolution Edited Photos</p>
                         <p>Digital Photo Gallery</p>
-                        <button class="choose-service">Select Service</button>
+                        <span id="inquire-today-container"><a id="inquire-link" href="/contact">Inquire Today</a></span>
                     </div>
                 </div>
             </section>
 
+            <section id="wedding-add-ons">
+                <h2>Wedding Add Ons</h2>
+                <p>Second Shooter: starting at $300</p>
+                <p>Engagement Session: $350</p>
+            </section>
+
+            <section id="elopement">
+                <div id="elopement-left" class="elopement-containers">
+                    <h2>Elopement</h2>
+                    <p>- 1 Hour of Continual Coverage</p>
+                    <p>- 1 Photographer</p>
+                    <p>- 20-50 High Resolution Edited Photos</p>
+                    <p>- Digital Photo Gallery</p>
+                    <p>- Perfect For Small Ceremonies, Courthouse, and Intimate Gatherings</p>
+                    <p>- $350</p>
+                </div>
+                <div id="elopement-right" class="elopement-containers">
+                    <img id="elopement-img" alt="elopement-photo" src="{{ url_for('static', filename='photos/DSC05173.jpg')}}">
+                </div>
+            </section>
 
             <section id="testimonials">
                 <div class="splide testimonial-slider" role="group" aria-label="home-carousel">
