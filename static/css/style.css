@@ -163,9 +163,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 70%;
     padding-bottom: 100px;
     padding-top: 50px;
     padding: 50px 2rem 100px 2rem;
+    margin: 0 auto;
 }
 
 .home-page #what-its-like #left-section h3 {
@@ -177,12 +180,12 @@ header {
 }
 
 .home-page #what-its-like #left-section{
-    width: 400px;
+    width: 50%;
     
 }
 
 .home-page #what-its-like #right-section{
-    width: 500px;
+    width: 50%;
     padding-top: 45px;
     padding-left: 40px;
 }
@@ -325,6 +328,36 @@ header {
     font-family: var(--primary-font-family--);
 }
 
+#intro {
+    width: 80%;
+    margin: 2rem auto 5rem auto;               /* no more 275px guess */
+}
+
+#intro img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#text-overlay {
+    position: relative;              /* keeps it painted above the image */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 85%;
+    margin: calc(-1 * clamp(40px, 8vw, 120px)) auto 0;   /* overlap scales with screen, capped */
+    padding: 2rem;
+    background: #1c1c1e;
+    color: var(--primary-text-color--);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+#text-overlay h2 {
+    margin-top: 0;
+}
+
+
 .wedding-investments-page .pricing-container {
     border: none;
     margin: auto;
@@ -340,9 +373,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20%;
-    height: 400px;
-    padding: 0;
+    width: 30%;
+    padding: 20px;
     background-color:  rgb(27, 27, 27);;
     overflow-wrap: break-word;
     color: var(--primary-text-color--);
@@ -355,6 +387,11 @@ header {
 
 .wedding-investments-page .pricing-card p {
     padding: 8px 0;
+    text-align: center;
+}
+
+
+.wedding-investments-page .pricing-card h2 {
     text-align: center;
 }
 
@@ -393,18 +430,22 @@ header {
 
 .wedding-investments-page #elopement {
     display: flex;
+    flex: row;
+    flex-wrap: wrap-reverse;
     justify-content: center;
-    padding: 6rem 5rem;
+    padding: 6rem 2rem;
 }
 
 .wedding-investments-page .elopement-containers {
-    width: 38%;
+    width: 42%;
+    min-width: 350px;
 }
 
 .wedding-investments-page #elopement-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 2rem;
 }
 
 .wedding-investments-page #elopement-left > p {
@@ -420,11 +461,54 @@ header {
 
 .wedding-investments-page #elopement-img {
     width: 100%;
-    max-width: 600px;
-    padding-left: 2rem;
-
+    min-width: 350px;
+    height: 750px;
+    object-fit: cover;
 }
 
+.wedding-investments-page #wedding-day-text-img-container {
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 2rem 6rem 2rem;
+    margin: 0 auto;
+}
+
+.wedding-investments-page #wedding-day-title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.wedding-investments-page .wedding-day-containers {
+    width: 42%;
+    min-width: 350px;
+}
+
+.wedding-investments-page #wedding-day-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.wedding-investments-page #wedding-day-right > p {
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+.wedding-investments-page #wedding-day-right > h2 {
+    padding-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.wedding-investments-page #wedding-day-img {
+    width: 100%;
+    min-width: 350px;
+    height: 750px;
+    object-fit: cover;
+}
 
 /*===================about.html===================*/
 
@@ -505,52 +589,6 @@ header {
 }
 
 
-.services-page .pricing-container {
-    border: none;
-    margin: auto;
-    display: flex;
-    flex: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 3rem;
-}
-
-.services-page .pricing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1.2rem;
-    background-color:  rgb(27, 27, 27);
-    margin: 0 15px ;
-    transition: transform ease 0.3s;
-    overflow-wrap: break-word;
-    color: var(--primary-text-color--);
-}
-/*
-.services-page .pricing-card:hover {
-    transform: scale(1.03);
-}
-*/
-.services-page .service-image {
-    max-width: 575px;
-    width: 100%;
-}
-
-.services-page .pricing-card p {
-    padding: 8px 0;
-    text-align: center;
-}
-
-.services-page .pricing-card hr {
-    width: 90%;
-    border: 0.5px solid var(--primary-text-color--);
-    margin-bottom: 20px;
-}
-
-.services-page .service-type {
-    padding: 20px;
-}
 
 .services-page .upcharge-container {
     display: flex;
@@ -937,17 +975,86 @@ footer {
 
 /*===================Media===================*/
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 760px) {
+    #home-img-carousel .splide__slide img {
+        width: auto;
+        height: 400px;
+        display: block;
+      }
+      
+
+    #what-its-like {
+        flex-direction: column;
+        width: 95%;
+        text-align: center;
+    }
+
+    .home-page #what-its-like #left-section{
+        width: 100%;
+        
+    }
+    
+    .home-page #what-its-like #right-section{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .wedding-investments-page .pricing-card {
+        width: 100%;
+    }
+    
+    .wedding-investments-page .elopement-containers {
+        width: 90%;
+    }
+
+    .wedding-investments-page #elopement-left > h2 {
+        padding-top: 3rem;
+    }
+
+    .wedding-investments-page #elopement-left > p {
+        text-align: center;
+    }
+    
+
+    .wedding-investments-page #elopement-img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .wedding-investments-page .wedding-day-containers {
+        width: 90%;
+    }
+
+    .wedding-investments-page #wedding-day-right {
+        padding-left: 0;
+    }
+
+    .wedding-investments-page #wedding-day-right > h2 {
+        padding-top: 3rem;
+    }
+
+    .wedding-investments-page #wedding-day-right > p {
+        text-align: center;
+    }
+    
+
+    .wedding-investments-page #elopement-img {
+        width: 100%;
+        object-fit: cover;
+    }
 
     .home-page #introduction-text {
         font-size: 2rem;
         width: 80%;
     }
 
-
     .text-overlay p {
         font-size: 1.3rem;
     }   
+
+    .services-page #introduction-text {
+        width: 80%;
+    }
 
     .services-page #group-package-information {
         flex-direction: column;
@@ -957,14 +1064,18 @@ footer {
         width: 100%;
     }
 
-
     .footer-container {
         flex-direction: column;
     }
 }
 
+
 @media screen and (max-width: 980px) {
-        .about-page #about-me {
+    #what-its-like {
+        width: 100%;
+    }
+
+    .about-page #about-me {
         flex-direction: column;
         align-items: center; /* Centers the image and paragraph container vertically */
         padding-top: 30px;
