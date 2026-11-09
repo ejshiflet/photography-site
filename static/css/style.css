@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-text-color--: #dfdfdf;
+    --primary-text-color--: #eaeaea;
     --primary-font-family--: 'Inter-Local', "Helvetica Neue", Helvetica, Arial, sans-serif;
     --accent-color--: #7A8D80;
     --background-color--: rgb(20, 20, 20);
@@ -329,7 +329,7 @@ header {
 }
 
 #intro {
-    width: 80%;
+    width: 70%;
     margin: 2rem auto 5rem auto;               /* no more 275px guess */
 }
 
@@ -375,7 +375,7 @@ header {
     align-items: center;
     width: 30%;
     padding: 20px;
-    background-color:  rgb(27, 27, 27);;
+    background-color:  #1c1c1e;
     overflow-wrap: break-word;
     color: var(--primary-text-color--);
 }
@@ -588,7 +588,50 @@ header {
     padding: 2rem 0 3rem 0;
 }
 
+.services-page .pricing-container {
+    border: none;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
 
+.services-page .pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 575px;      /* every card is exactly 575px wide */
+    max-width: 100%;      /* keeps it from overflowing on small screens */
+    padding-bottom: 1.2rem;
+    background-color: #1c1c1e;
+    margin: 1rem 30px;
+    transition: transform ease 0.3s;
+    overflow-wrap: break-word;
+    color: var(--primary-text-color--);
+}
+
+.services-page .service-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.services-page .pricing-card p {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.services-page .pricing-card hr {
+    width: 90%;
+    border: 0.5px solid var(--primary-text-color--);
+    margin-bottom: 20px;
+}
+
+.services-page .service-type {
+    padding: 20px;
+}
 
 .services-page .upcharge-container {
     display: flex;
@@ -633,11 +676,11 @@ header {
 }
 
 .services-page #group-package-one {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--background-color--);
 }
 
 .services-page #group-package-two {
-    background-color:#181818;
+    background-color: #1c1c1e;
 }
 
 .services-page .group-package p {
@@ -975,7 +1018,7 @@ footer {
 
 /*===================Media===================*/
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 800px) {
     #home-img-carousel .splide__slide img {
         width: auto;
         height: 400px;
@@ -997,6 +1040,10 @@ footer {
     .home-page #what-its-like #right-section{
         width: 100%;
         padding-left: 0;
+    }
+
+    .wedding-investments-page #intro {
+        width: 100%;
     }
 
     .wedding-investments-page .pricing-card {
@@ -1107,4 +1154,9 @@ footer {
         margin-left: 0;
         padding-top: 15px;
     }
+
+    #contact h2 {
+        width: 70%;
+    }
+
 }
