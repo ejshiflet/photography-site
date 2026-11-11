@@ -53,7 +53,7 @@ def contact():
         message = request.form['message']
 
         msg = EmailMessage()
-        msg['Subject'] = f'New message from {first} {last}'
+        msg['Subject'] = f'[Shiflet Studios] New message from {first} {last}'
         msg['From'] = os.environ['GMAIL_USER']
         msg['To'] = os.environ['GMAIL_USER']
         msg['Reply-To'] = email

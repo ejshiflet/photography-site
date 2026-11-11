@@ -8,17 +8,9 @@
                 <p>Email: Shifletstudios@gmail.com</p>
                 {% if request.args.get('sent') %}
                     <p class="form-notice form-success">Thanks! Your message was sent. I'll get back to you within 48 hours.</p>
-                    <script>
-                        alert("Thanks! Your message was sent.");
-                        history.replaceState(null, "", "/contact");
-                    </script>
                 {% endif %}
                 {% if request.args.get('error') %}
                     <p class="form-notice form-error">Sorry, something went wrong. Please email me directly.</p>
-                    <script>
-                        alert("Sorry, something went wrong. Please email me directly.");
-                        history.replaceState(null, "", "/contact");
-                    </script>
                 {% endif %}
                 <div id="contact-form-container">
                     <form class="contact-form" action="/contact" method="POST">
