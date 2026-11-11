@@ -15,16 +15,16 @@
                 <div id="contact-form-container">
                     <form class="contact-form" action="/contact" method="POST">
                         <label for="first-name">First Name</label>
-                        <input id="first-name" type="text" autocomplete="given-name" required>
+                        <input id="first-name" name="first-name" type="text" autocomplete="given-name" required>
 
                         <label for="last-name">Last Name</label>
-                        <input id="last-name" type="text" autocomplete="family-name" required>
+                        <input id="last-name" name="last-name" type="text" autocomplete="family-name" required>
 
                         <label for="email">Email</label>
-                        <input id="email" type="email" autocomplete="email" required>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
 
                         <label for="user-message">Your Message</label>
-                        <textarea id="user-message" type="text" rows="5" required></textarea>
+                        <textarea id="user-message" name="message" type="text" rows="5" required></textarea>
 
                         <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
