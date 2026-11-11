@@ -1,1 +1,1 @@
-Download nodemodules and put it in the main photography-site folder
+Unzip the node_modules.zip into the photography-site main folder.
