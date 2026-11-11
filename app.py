@@ -1,5 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, request, redirect, render_template, url_for
 import sqlite3
+import os, smtplib
+from email.message import EmailMessage
 
 app = Flask(__name__)
 
@@ -39,8 +41,34 @@ def about():
 def faq():
     return render_template('faq.html', page_class='faq-page')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        if request.form.get('website'):   # honeypot: bots fill this in
+            return redirect(url_for('contact'))
+
+        first = request.form['first-name']
+        last = request.form['last-name']
+        email = request.form['email']
+        message = request.form['message']
+
+        msg = EmailMessage()
+        msg['Subject'] = f'New message from {first} {last}'
+        msg['From'] = os.environ['GMAIL_USER']
+        msg['To'] = os.environ['GMAIL_USER']
+        msg['Reply-To'] = email
+        msg.set_content(f'From: {first} {last} <{email}>\n\n{message}')
+
+        try:
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+                server.login(os.environ['GMAIL_USER'], os.environ['GMAIL_APP_PASSWORD'])
+                server.send_message(msg)
+        except Exception as e:
+            print('Email error:', e)
+            return redirect(url_for('contact', error=1))
+
+        return redirect(url_for('contact', sent=1))
+
     return render_template('contact.html', page_class='contact-page')
 
 def testimonial_creation():
