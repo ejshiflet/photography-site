@@ -908,6 +908,13 @@ textarea:focus {
     cursor: pointer;
 }
 
+.form-notice {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 16px 0;
+}
+.form-success { background: #e6f4ea; color: #1e6b34; }
+.form-error   { background: #fce8e6; color: #a1281c; }
 
 
 /*===================Footer===================*/
