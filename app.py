@@ -1,9 +1,7 @@
 from flask import Flask, render_template
-from flask_livereload import LiveReload
 import sqlite3
 
 app = Flask(__name__)
-LiveReload(app)
 
 @app.route('/')
 def home():
@@ -58,4 +56,6 @@ def testimonial_creation():
     return testimonials
 
 if __name__ == '__main__':
+    from flask_livereload import LiveReload
+    LiveReload(app)
     app.run(host='0.0.0.0', port=5000, debug=True)
