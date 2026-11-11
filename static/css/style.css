@@ -1169,3 +1169,96 @@ footer {
     }
 
 }
+
+/* Hidden on desktop, so your current layout is untouched */
+#nav-toggle {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    header {
+        position: relative; /* lets the dropdown anchor to the header */
+    }
+
+    #title-container {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    #header-title {
+        padding-left: 0;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    /* Hamburger button */
+    #nav-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    #nav-toggle span {
+        width: 26px;
+        height: 2px;
+        background-color: var(--primary-text-color--);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hamburger turns into an X when open */
+    #nav-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    #nav-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+    #nav-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Collapsed dropdown */
+    #nav-bar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 0 20px;
+        background-color: var(--background-color--);
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+    }
+
+    #nav-bar.open {
+        display: flex;
+    }
+
+    .nav-link-container {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 16px 20px;
+        text-align: center;
+    }
+
+    #contact-link-container {
+        display: block;
+        margin: 16px 20px 0;
+        text-align: center;
+    }
+
+    #contact-link {
+        display: block;
+    }
+}
