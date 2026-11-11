@@ -1181,10 +1181,7 @@ footer {
     }
 
     #title-container {
-        width: 100%;
-        box-sizing: border-box;
-        justify-content: space-between;
-        padding: 20px;
+        justify-content: center;
     }
 
     #header-title {
@@ -1202,6 +1199,12 @@ footer {
         border: none;
         padding: 8px;
         cursor: pointer;
+
+        position: absolute;
+        right: 30px;
+        top: 67px;
+        transform: translateY(-50%);
+        z-index: 100;
     }
 
     #nav-toggle span {
