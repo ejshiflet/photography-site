@@ -22,8 +22,33 @@ def home():
 
 
 @app.route('/portfolio')
-def portfolio():
-    return render_template('portfolio.html', page_class='portfolio-page')
+@app.route('/portfolio/<category>')
+def portfolio(category=None):
+    connection = sqlite3.connect("database.db")
+    connection.row_factory = sqlite3.Row   # lets the template use img['title']
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT DISTINCT category FROM portfolio_images ORDER BY category")
+    categories = cursor.fetchall()
+
+    if category:
+        cursor.execute(
+            "SELECT * FROM portfolio_images WHERE category = ? ORDER BY id DESC",
+            (category,)
+        )
+    else:
+        cursor.execute("SELECT * FROM portfolio_images ORDER BY id DESC")
+    images = cursor.fetchall()
+
+    connection.close()
+
+    return render_template(
+        'portfolio.html',
+        page_class='portfolio-page',
+        images=images,
+        categories=categories,
+        active_category=category
+    )
 
 @app.route('/wedding-investments')
 def wedding_investments():

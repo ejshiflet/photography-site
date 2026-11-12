@@ -1,6 +1,40 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
+            <section class="portfolio">
+            <nav class="category-nav">
+                <a href="{{ url_for('portfolio') }}"
+                class="{{ 'active' if not active_category else '' }}">All</a>
+                {% for cat in categories %}
+                <a href="{{ url_for('portfolio', category=cat['category']) }}"
+                    class="{{ 'active' if active_category == cat['category'] else '' }}">
+                    {{ cat['category'] }}
+                </a>
+                {% endfor %}
+            </nav>
+
+
+            <div class="gallery">
+                {% for img in images %}
+                <a href="{{ url_for('static', filename='photos/' + img['image_filename']) }}"
+                    class="gallery-item glightbox"
+                    data-gallery="portfolio"
+                    data-title="{{ img['title'] or '' }}">
+                    <img src="{{ url_for('static', filename='photos/' + img['image_filename']) }}"
+                        alt="{{ img['alt_text'] or img['title'] or img['category'] }}"
+                        loading="lazy">
+                </a>
+                {% else %}
+                <p>No photos in this category yet.</p>
+                {% endfor %}
+            </div>
+            </section>
+
+            <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+            <script>
+            GLightbox({ selector: '.glightbox' });
+            </script>
 
 {% endblock %}
